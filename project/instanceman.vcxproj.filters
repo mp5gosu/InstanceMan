@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="generated">
+      <UniqueIdentifier>{219B5093-BADF-89A1-0000-5284111A998F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generated\hxx">
+      <UniqueIdentifier>{219B5093-BADF-89A1-8ACC-618A6830A19B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{219B5093-BADF-89A1-0000-00000001B8A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{219B5093-BADF-89A1-0000-0000CA90681B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\generated\hxx\register.cpp">
+      <Filter>generated\hxx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\instanceman.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\res\c4d_symbols.h">
+      <Filter>res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Command_Create.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Command_FrameElements.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Command_FrameObjects.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Command_MakeEditable.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Command_Rename.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Command_Select.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Command_Settings.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Command_Split.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Command_Swap.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\InputDialog.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SettingsDialog.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\common_functions.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\constants.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\instance_functions.h">
+      <Filter>source</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

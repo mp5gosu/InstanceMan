@@ -1,0 +1,71 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.xdl64
+*.cdl64
+
+# Debug stuff
+*.pdb
+*.ilk
+
+# Maxon project tool
+*.stamp
+*.msg
+*.ph
+# *.hxx
+
+# Additional
+build
+generated
+build
+!project/
+project/*
+!project/projectdefinition.txt
+*.xlib
+*.DS_Store
+*.hint
+*.hint
+*.ipch
+*.suo
+*.db
+*.log
+*.lastbuildstate
+*.tlog
+*.idb
+*.user
+*.sln
+*.vcxproj
+*.filters
+*.props
+*.bin
+*.json
+*.sqlite
