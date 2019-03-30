@@ -14,6 +14,7 @@
     <ProjectGuid>{4B951874-C6FC-B292-0009-38CB8C5CDEA3}</ProjectGuid>
     <RootNamespace>maxon</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ImportGroup Label="PropertySheets">
@@ -88,6 +89,9 @@
     <Manifest>
       <AdditionalManifestFiles />
     </Manifest>
+    <PostBuildEvent>
+      <Command>if $(ConfigurationName) == Release (powershell mkdir 'E:\Cinema 4D plugins\Release\$(TargetName)\' -Force; Compress-Archive -Path '$(TargetPath)', '$(TargetDir)res\' -DestinationPath 'E:\Cinema 4D plugins\Release\$(ProjectName)\$(TargetName).zip' -Force)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ProjectReference Include="$(MAXON_ROOTDIR)\frameworks\cinema.framework\project\cinema.framework.vcxproj">
@@ -116,6 +120,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\generated\hxx\interface_registration.cpp" />
     <ClCompile Include="..\generated\hxx\register.cpp" />
     <ClCompile Include="..\source\instanceman.cpp" />
   </ItemGroup>

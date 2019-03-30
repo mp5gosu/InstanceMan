@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A06FF25396084E6AE6010000 /* instanceman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A06FF25396084E6AE6000000 /* instanceman.cpp */; };
 		A06FF253966542540E010000 /* libmesh_misc.framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A06FF253966542540E000000 /* libmesh_misc.framework.a */; };
+		A06FF25396D80552BB010000 /* interface_registration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A06FF25396D80552BB000000 /* interface_registration.cpp */; };
 		A06FF25396D93CCD9F010000 /* register.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A06FF25396D93CCD9F000000 /* register.cpp */; };
 		A06FF25396F470FF41010000 /* libcinema.framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A06FF25396F470FF41000000 /* libcinema.framework.a */; };
 		A06FF25396F4AB3A6F010000 /* libcore.framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A06FF25396F4AB3A6F000000 /* libcore.framework.a */; };
@@ -98,6 +99,7 @@
 		A06FF2539699A7EFA0000000 /* Command_Rename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command_Rename.h; path = ../source/Command_Rename.h; sourceTree = SOURCE_ROOT; };
 		A06FF25396A250EDD9000000 /* SettingsDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsDialog.h; path = ../source/SettingsDialog.h; sourceTree = SOURCE_ROOT; };
 		A06FF25396C298F395000000 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = constants.h; path = ../source/constants.h; sourceTree = SOURCE_ROOT; };
+		A06FF25396D80552BB000000 /* interface_registration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = interface_registration.cpp; path = ../generated/hxx/interface_registration.cpp; sourceTree = SOURCE_ROOT; };
 		A06FF25396D93CCD9F000000 /* register.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = register.cpp; path = ../generated/hxx/register.cpp; sourceTree = SOURCE_ROOT; };
 		A06FF25396F470FF41020000 /* cinema.framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cinema.framework.xcodeproj; path = ../../../frameworks/cinema.framework/project/cinema.framework.xcodeproj; sourceTree = SOURCE_ROOT; };
 		A06FF25396F4AB3A6F020000 /* core.framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.framework.xcodeproj; path = ../../../frameworks/core.framework/project/core.framework.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -191,6 +193,7 @@
 		A06FF25396681C2CE8000000 /* hxx */ = {
 			isa = PBXGroup;
 			children = (
+				A06FF25396D80552BB000000 /* interface_registration.cpp */,
 				A06FF25396D93CCD9F000000 /* register.cpp */,
 			);
 			name = hxx;
@@ -380,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A06FF25396084E6AE6010000 /* instanceman.cpp in Sources */,
+				A06FF25396D80552BB010000 /* interface_registration.cpp in Sources */,
 				A06FF25396D93CCD9F010000 /* register.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

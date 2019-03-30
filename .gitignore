@@ -61,3 +61,4 @@ generated
 *.bin
 *.json
 *.sqlite
+*.pbxproj
