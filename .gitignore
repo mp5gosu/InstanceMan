@@ -46,10 +46,8 @@
 # Additional
 build
 generated
-build
 *.xlib
 *.DS_Store
-*.hint
 *.hint
 *.ipch
 *.suo
@@ -59,10 +57,7 @@ build
 *.tlog
 *.idb
 *.user
-*.sln
-*.vcxproj
 *.filters
-*.props
 *.bin
 *.json
 *.sqlite
