@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A06FF25396084E6AE6010000 /* instanceman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A06FF25396084E6AE6000000 /* instanceman.cpp */; };
+		A06FF253966542540E010000 /* libmesh_misc.framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A06FF253966542540E000000 /* libmesh_misc.framework.a */; };
+		A06FF25396D93CCD9F010000 /* register.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A06FF25396D93CCD9F000000 /* register.cpp */; };
+		A06FF25396F470FF41010000 /* libcinema.framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A06FF25396F470FF41000000 /* libcinema.framework.a */; };
+		A06FF25396F4AB3A6F010000 /* libcore.framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A06FF25396F4AB3A6F000000 /* libcore.framework.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A06FF253966542540E040000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A06FF253966542540E020000 /* mesh_misc.framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A08C5CDEA36542540E7B0000;
+			remoteInfo = mesh_misc.framework;
+		};
+		A06FF253966542540E040100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A06FF253966542540E020000 /* mesh_misc.framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A08C5CDEA36542540E7B0100;
+			remoteInfo = "mesh_misc.framework static library";
+		};
+		A06FF253966542540E050000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A06FF253966542540E020000 /* mesh_misc.framework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A08C5CDEA36542540E000000;
+			remoteInfo = mesh_misc.framework;
+		};
+		A06FF25396F470FF41040000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A06FF25396F470FF41020000 /* cinema.framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A08C5CDEA3F470FF417B0000;
+			remoteInfo = cinema.framework;
+		};
+		A06FF25396F470FF41040100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A06FF25396F470FF41020000 /* cinema.framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A08C5CDEA3F470FF417B0100;
+			remoteInfo = "cinema.framework static library";
+		};
+		A06FF25396F470FF41050000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A06FF25396F470FF41020000 /* cinema.framework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A08C5CDEA3F470FF41000000;
+			remoteInfo = cinema.framework;
+		};
+		A06FF25396F4AB3A6F040000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A06FF25396F4AB3A6F020000 /* core.framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A08C5CDEA3F4AB3A6F7B0000;
+			remoteInfo = core.framework;
+		};
+		A06FF25396F4AB3A6F040100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A06FF25396F4AB3A6F020000 /* core.framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A08C5CDEA3F4AB3A6F7B0100;
+			remoteInfo = "core.framework static library";
+		};
+		A06FF25396F4AB3A6F050000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A06FF25396F4AB3A6F020000 /* core.framework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A08C5CDEA3F4AB3A6F000000;
+			remoteInfo = core.framework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A06FF2539600000000000000 /* debugbase.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = debugbase.xcconfig; path = ../../../frameworks/settings/debugbase.xcconfig; sourceTree = SOURCE_ROOT; };
+		A06FF2539600000000050000 /* releasebase.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = releasebase.xcconfig; path = ../../../frameworks/settings/releasebase.xcconfig; sourceTree = SOURCE_ROOT; };
+		A06FF25396046EE2B5000000 /* Command_Swap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command_Swap.h; path = ../source/Command_Swap.h; sourceTree = SOURCE_ROOT; };
+		A06FF25396084E6AE6000000 /* instanceman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = instanceman.cpp; path = ../source/instanceman.cpp; sourceTree = SOURCE_ROOT; };
+		A06FF2539619D6F545000000 /* Command_Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command_Settings.h; path = ../source/Command_Settings.h; sourceTree = SOURCE_ROOT; };
+		A06FF2539623CEE1DE000000 /* Command_Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command_Create.h; path = ../source/Command_Create.h; sourceTree = SOURCE_ROOT; };
+		A06FF25396305A6018000000 /* InputDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputDialog.h; path = ../source/InputDialog.h; sourceTree = SOURCE_ROOT; };
+		A06FF25396448F46FA000000 /* c4d_symbols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c4d_symbols.h; path = ../res/c4d_symbols.h; sourceTree = SOURCE_ROOT; };
+		A06FF253966542540E020000 /* mesh_misc.framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mesh_misc.framework.xcodeproj; path = ../../../frameworks/mesh_misc.framework/project/mesh_misc.framework.xcodeproj; sourceTree = SOURCE_ROOT; };
+		A06FF253966C73A79F000000 /* instance_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = instance_functions.h; path = ../source/instance_functions.h; sourceTree = SOURCE_ROOT; };
+		A06FF25396762EEB76000000 /* Command_FrameElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command_FrameElements.h; path = ../source/Command_FrameElements.h; sourceTree = SOURCE_ROOT; };
+		A06FF253967AF85BB4000000 /* Command_MakeEditable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command_MakeEditable.h; path = ../source/Command_MakeEditable.h; sourceTree = SOURCE_ROOT; };
+		A06FF253967E145BAC000000 /* Command_Split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command_Split.h; path = ../source/Command_Split.h; sourceTree = SOURCE_ROOT; };
+		A06FF2539698D8B8F5000000 /* common_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common_functions.h; path = ../source/common_functions.h; sourceTree = SOURCE_ROOT; };
+		A06FF2539699A7EFA0000000 /* Command_Rename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command_Rename.h; path = ../source/Command_Rename.h; sourceTree = SOURCE_ROOT; };
+		A06FF25396A250EDD9000000 /* SettingsDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsDialog.h; path = ../source/SettingsDialog.h; sourceTree = SOURCE_ROOT; };
+		A06FF25396C298F395000000 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = constants.h; path = ../source/constants.h; sourceTree = SOURCE_ROOT; };
+		A06FF25396D93CCD9F000000 /* register.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = register.cpp; path = ../generated/hxx/register.cpp; sourceTree = SOURCE_ROOT; };
+		A06FF25396F470FF41020000 /* cinema.framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cinema.framework.xcodeproj; path = ../../../frameworks/cinema.framework/project/cinema.framework.xcodeproj; sourceTree = SOURCE_ROOT; };
+		A06FF25396F4AB3A6F020000 /* core.framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.framework.xcodeproj; path = ../../../frameworks/core.framework/project/core.framework.xcodeproj; sourceTree = SOURCE_ROOT; };
+		A06FF25396FC7FF329000000 /* Command_FrameObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command_FrameObjects.h; path = ../source/Command_FrameObjects.h; sourceTree = SOURCE_ROOT; };
+		A06FF25396FE5375DE000000 /* Command_Select.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command_Select.h; path = ../source/Command_Select.h; sourceTree = SOURCE_ROOT; };
+		A08C5CDEA36FF253967B0000 /* instanceman_r20.xlib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = instanceman_r20.xlib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A08C5CDEA36FF253967B0100 /* libinstanceman_r20_static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libinstanceman_r20_static.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A06FF25396000000000F0000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A06FF253966542540E010000 /* libmesh_misc.framework.a in Frameworks */,
+				A06FF25396F470FF41010000 /* libcinema.framework.a in Frameworks */,
+				A06FF25396F4AB3A6F010000 /* libcore.framework.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A06FF2539600000000140000 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				A06FF25396F470FF41020000 /* cinema.framework.xcodeproj */,
+				A06FF25396F4AB3A6F020000 /* core.framework.xcodeproj */,
+				A06FF253966542540E020000 /* mesh_misc.framework.xcodeproj */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		A06FF2539600000000190000 /* configurations */ = {
+			isa = PBXGroup;
+			children = (
+				A06FF2539600000000000000 /* debugbase.xcconfig */,
+				A06FF2539600000000050000 /* releasebase.xcconfig */,
+			);
+			name = configurations;
+			sourceTree = "<group>";
+		};
+		A06FF25396000000001E0000 = {
+			isa = PBXGroup;
+			children = (
+				A06FF2539600000000190000 /* configurations */,
+				A06FF25396111A998F000000 /* generated */,
+				A06FF2539600000000140000 /* libs */,
+				A06FF2539600000000230000 /* products */,
+				A06FF253960001B8A0000000 /* res */,
+				A06FF25396CA90681B000000 /* source */,
+			);
+			sourceTree = "<group>";
+		};
+		A06FF2539600000000230000 /* products */ = {
+			isa = PBXGroup;
+			children = (
+				A08C5CDEA36FF253967B0000 /* instanceman_r20.xlib */,
+				A08C5CDEA36FF253967B0100 /* libinstanceman_r20_static.a */,
+			);
+			name = products;
+			sourceTree = "<group>";
+		};
+		A06FF253960001B8A0000000 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				A06FF25396448F46FA000000 /* c4d_symbols.h */,
+			);
+			name = res;
+			path = ../res;
+			sourceTree = SOURCE_ROOT;
+		};
+		A06FF25396111A998F000000 /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				A06FF25396681C2CE8000000 /* hxx */,
+			);
+			name = generated;
+			path = ../generated;
+			sourceTree = SOURCE_ROOT;
+		};
+		A06FF253966542540E280000 /* products */ = {
+			isa = PBXGroup;
+			children = (
+				A06FF253966542540E000000 /* libmesh_misc.framework.a */,
+				A06FF253966542540E000100 /* libmesh_misc.framework_static.a */,
+			);
+			name = products;
+			sourceTree = "<group>";
+		};
+		A06FF25396681C2CE8000000 /* hxx */ = {
+			isa = PBXGroup;
+			children = (
+				A06FF25396D93CCD9F000000 /* register.cpp */,
+			);
+			name = hxx;
+			path = ../generated/hxx;
+			sourceTree = SOURCE_ROOT;
+		};
+		A06FF25396CA90681B000000 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				A06FF2539623CEE1DE000000 /* Command_Create.h */,
+				A06FF25396762EEB76000000 /* Command_FrameElements.h */,
+				A06FF25396FC7FF329000000 /* Command_FrameObjects.h */,
+				A06FF253967AF85BB4000000 /* Command_MakeEditable.h */,
+				A06FF2539699A7EFA0000000 /* Command_Rename.h */,
+				A06FF25396FE5375DE000000 /* Command_Select.h */,
+				A06FF2539619D6F545000000 /* Command_Settings.h */,
+				A06FF253967E145BAC000000 /* Command_Split.h */,
+				A06FF25396046EE2B5000000 /* Command_Swap.h */,
+				A06FF2539698D8B8F5000000 /* common_functions.h */,
+				A06FF25396C298F395000000 /* constants.h */,
+				A06FF25396305A6018000000 /* InputDialog.h */,
+				A06FF25396084E6AE6000000 /* instanceman.cpp */,
+				A06FF253966C73A79F000000 /* instance_functions.h */,
+				A06FF25396A250EDD9000000 /* SettingsDialog.h */,
+			);
+			name = source;
+			path = ../source;
+			sourceTree = SOURCE_ROOT;
+		};
+		A06FF25396F470FF41280000 /* products */ = {
+			isa = PBXGroup;
+			children = (
+				A06FF25396F470FF41000000 /* libcinema.framework.a */,
+				A06FF25396F470FF41000100 /* libcinema.framework_static.a */,
+			);
+			name = products;
+			sourceTree = "<group>";
+		};
+		A06FF25396F4AB3A6F280000 /* products */ = {
+			isa = PBXGroup;
+			children = (
+				A06FF25396F4AB3A6F000000 /* libcore.framework.a */,
+				A06FF25396F4AB3A6F000100 /* libcore.framework_static.a */,
+			);
+			name = products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A06FF25396000000002D0000 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A08C5CDEA36FF25396000000 /* instanceman_r20 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A06FF2539600000000460000 /* Build configuration list for PBXNativeTarget "instanceman_r20" */;
+			buildPhases = (
+				A06FF2539600000000690000 /* Run Source Processor */,
+				A06FF2539600000000320000 /* Sources */,
+				A06FF25396000000000F0000 /* Frameworks */,
+				A06FF25396000000002D0000 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A06FF25396F470FF41370000 /* PBXTargetDependency */,
+				A06FF25396F4AB3A6F370000 /* PBXTargetDependency */,
+				A06FF253966542540E370000 /* PBXTargetDependency */,
+			);
+			name = instanceman_r20;
+			productName = instanceman_r20;
+			productReference = A08C5CDEA36FF253967B0000 /* instanceman_r20.xlib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A06FF25396000000003C0000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0999;
+			};
+			buildConfigurationList = A06FF2539600000000410000 /* Build configuration list for PBXProject "instanceman_r20" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A06FF25396000000001E0000;
+			productRefGroup = A06FF2539600000000230000 /* products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A06FF25396F470FF41280000 /* products */;
+					ProjectRef = A06FF25396F470FF41020000 /* cinema.framework.xcodeproj */;
+				},
+				{
+					ProductGroup = A06FF25396F4AB3A6F280000 /* products */;
+					ProjectRef = A06FF25396F4AB3A6F020000 /* core.framework.xcodeproj */;
+				},
+				{
+					ProductGroup = A06FF253966542540E280000 /* products */;
+					ProjectRef = A06FF253966542540E020000 /* mesh_misc.framework.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A08C5CDEA36FF25396000000 /* instanceman_r20 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A06FF253966542540E000000 /* libmesh_misc.framework.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmesh_misc.framework.a;
+			remoteRef = A06FF253966542540E040000 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A06FF253966542540E000100 /* libmesh_misc.framework_static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmesh_misc.framework_static.a;
+			remoteRef = A06FF253966542540E040100 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A06FF25396F470FF41000000 /* libcinema.framework.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcinema.framework.a;
+			remoteRef = A06FF25396F470FF41040000 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A06FF25396F470FF41000100 /* libcinema.framework_static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcinema.framework_static.a;
+			remoteRef = A06FF25396F470FF41040100 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A06FF25396F4AB3A6F000000 /* libcore.framework.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcore.framework.a;
+			remoteRef = A06FF25396F4AB3A6F040000 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A06FF25396F4AB3A6F000100 /* libcore.framework_static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcore.framework_static.a;
+			remoteRef = A06FF25396F4AB3A6F040100 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A06FF2539600000000690000 /* Run Source Processor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Source Processor";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "python ${MAXON_ROOTDIR}frameworks/settings/sourceprocessor/sourceprocessor.py \"$PROJECT_DIR/..\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A06FF2539600000000320000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A06FF25396084E6AE6010000 /* instanceman.cpp in Sources */,
+				A06FF25396D93CCD9F010000 /* register.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A06FF253966542540E370000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = mesh_misc.framework;
+			targetProxy = A06FF253966542540E050000 /* PBXContainerItemProxy */;
+		};
+		A06FF25396F470FF41370000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = cinema.framework;
+			targetProxy = A06FF25396F470FF41050000 /* PBXContainerItemProxy */;
+		};
+		A06FF25396F4AB3A6F370000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = core.framework;
+			targetProxy = A06FF25396F4AB3A6F050000 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A06FF25396000000004B0000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A06FF2539600000000000000 /* debugbase.xcconfig */;
+			buildSettings = {
+				DEPLOYMENT_LOCATION = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(GCC_PREPROCESSOR_DEFINITIONS)",
+					USE_API_MAXON,
+					PRIVATE_MODULE_de_roberthitzer_instanceman,
+					"MAXON_MODULE_ID=\\\"de.roberthitzer.instanceman\\\"",
+				);
+				INSTALL_PATH = /..;
+				MAXON_ROOTDIR = ../../../;
+				USER_HEADER_SEARCH_PATHS = "../generated/hxx ../res ../source $(MAXON_ROOTDIR)frameworks/core.framework/source/** $(MAXON_ROOTDIR)frameworks/core.framework/generated/hxx $(MAXON_ROOTDIR)frameworks/cinema.framework/source/** $(MAXON_ROOTDIR)frameworks/cinema.framework/generated/hxx $(MAXON_ROOTDIR)frameworks/mesh_misc.framework/source/** $(MAXON_ROOTDIR)frameworks/mesh_misc.framework/generated/hxx $(inherited)";
+			};
+			name = Debug;
+		};
+		A06FF2539600000000500000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A06FF2539600000000050000 /* releasebase.xcconfig */;
+			buildSettings = {
+				DEPLOYMENT_LOCATION = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(GCC_PREPROCESSOR_DEFINITIONS)",
+					USE_API_MAXON,
+					PRIVATE_MODULE_de_roberthitzer_instanceman,
+					"MAXON_MODULE_ID=\\\"de.roberthitzer.instanceman\\\"",
+				);
+				INSTALL_PATH = /..;
+				MAXON_ROOTDIR = ../../../;
+				USER_HEADER_SEARCH_PATHS = "../generated/hxx ../res ../source $(MAXON_ROOTDIR)frameworks/core.framework/source/** $(MAXON_ROOTDIR)frameworks/core.framework/generated/hxx $(MAXON_ROOTDIR)frameworks/cinema.framework/source/** $(MAXON_ROOTDIR)frameworks/cinema.framework/generated/hxx $(MAXON_ROOTDIR)frameworks/mesh_misc.framework/source/** $(MAXON_ROOTDIR)frameworks/mesh_misc.framework/generated/hxx $(inherited)";
+			};
+			name = Release;
+		};
+		A06FF25396000000005A0000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_EXTENSION = xlib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		A06FF25396000000005F0000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_EXTENSION = xlib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A06FF2539600000000410000 /* Build configuration list for PBXProject "instanceman_r20" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A06FF25396000000004B0000 /* Debug */,
+				A06FF2539600000000500000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A06FF2539600000000460000 /* Build configuration list for PBXNativeTarget "instanceman_r20" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A06FF25396000000005A0000 /* Debug */,
+				A06FF25396000000005F0000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A06FF25396000000003C0000 /* Project object */;
+}

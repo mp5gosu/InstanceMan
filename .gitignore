@@ -47,9 +47,6 @@
 build
 generated
 build
-!project/
-project/*
-!project/projectdefinition.txt
 *.xlib
 *.DS_Store
 *.hint
