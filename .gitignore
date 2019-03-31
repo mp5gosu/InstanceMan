@@ -1,65 +1,15 @@
-# Prerequisites
-*.d
+# ignore topmost folders
+/*
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# re-include git related stuff
+!.gitignore
+!.gitattributes
+!readme.md
+!license
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-*.xdl64
-*.cdl64
-
-# Debug stuff
-*.pdb
-*.ilk
-
-# Maxon project tool
-*.stamp
-*.msg
-*.ph
-# *.hxx
-
-# Additional
-build
-generated
+# re-include project related stuff
+!/source/
+!project/
 project/*
 !project/projectdefinition.txt
-*.xlib
-*.DS_Store
-*.hint
-*.ipch
-*.suo
-*.db
-*.log
-*.lastbuildstate
-*.tlog
-*.idb
-*.user
-*.filters
-*.bin
-*.json
-*.sqlite
+!res/
