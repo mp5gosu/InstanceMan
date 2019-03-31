@@ -46,6 +46,8 @@
 # Additional
 build
 generated
+project/*
+!project/projectdefinition.txt
 *.xlib
 *.DS_Store
 *.hint
