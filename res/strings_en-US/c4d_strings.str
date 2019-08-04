@@ -2,9 +2,8 @@ STRINGTABLE
 {
 	IDS_PNAME_IM_SELECT "#$01Select";
 	IDS_PHELP_IM_SELECT "Select all instances of the same reference object.\u000a\u200b
-	\u000aCTRL: Selects nested instances. WARNING: Crashes when instances are linked to each other!
-	\u000aSHIFT: Also select reference object.
-	\u000aALT: Deselects all object before the operation.";
+	\u000aCTRL: Selects nested instances.
+	\u000aSHIFT: Also select reference object.";
 
 	IDS_PNAME_IM_CREATE "#$02Create";
 	IDS_PHELP_IM_CREATE "Creates new instances or copies existing ones.\u000a\u200b

@@ -41,9 +41,8 @@ public:
 		GetInputState(BFM_INPUT_KEYBOARD, BFM_INPUT_MODIFIERS, state);
 		const auto bShift = (state.GetInt32(BFM_INPUT_QUALIFIER) & QSHIFT) != 0;
 		const auto bCtrl = (state.GetInt32(BFM_INPUT_QUALIFIER) & QCTRL) != 0;
-		const auto bAlt = (state.GetInt32(BFM_INPUT_QUALIFIER) & QALT) != 0;
 
-		// Unselect all objects if Alt is held down
+		// Unselect all objects
 		g_DeselectAllObjects(doc);
 
 		// Iterate through all selected objects

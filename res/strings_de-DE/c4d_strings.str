@@ -2,9 +2,8 @@ STRINGTABLE
 {
 	IDS_PNAME_IM_SELECT "#$01Ausw\u00E4hlen";
 	IDS_PHELP_IM_SELECT "W\u00E4hlt alle Instanzen mit demselben Referenzobjekt aus.\u000a\u200b
-	\u000aSTRG: W\u00E4hlt verschachtelte Instanzen aus. WARNUNG: Fehler, wenn Instanzen sich gegenseitig verlinken!
-	\u000aUMSCHALT: W\u00E4hlt zus\u00E4tzlich das Referenzobjekt aus.
-	\u000aALT: W\u00E4hlt vorher alle Objekte ab.";
+	\u000aSTRG: W\u00E4hlt verschachtelte Instanzen aus.
+	\u000aUMSCHALT: W\u00E4hlt zus\u00E4tzlich das Referenzobjekt aus.";
 
 	IDS_PNAME_IM_CREATE "#$02Erstellen";
 	IDS_PHELP_IM_CREATE "Erstellt neue Instanzen oder kopiert existierende.\u000a\u200b
