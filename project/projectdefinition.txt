@@ -15,4 +15,4 @@ C4D=true
 stylecheck.level=0 // must be set after c4d=true
 
 // Custom ID
-ModuleId=de.roberthitzer.instanceman
+ModuleId=de.roberthitzer.instancemanr20
