@@ -1,0 +1,15 @@
+# ignore topmost folders
+/*
+
+# re-include git related stuff
+!.gitignore
+!.gitattributes
+!readme.md
+!license
+
+# re-include project related stuff
+!/source/
+!project/
+project/*
+!project/projectdefinition.txt
+!res/

@@ -1,0 +1,47 @@
+STRINGTABLE
+{
+	IDS_PNAME_IM_SELECT "#$01Ausw\u00E4hlen";
+	IDS_PHELP_IM_SELECT "W\u00E4hlt alle Instanzen mit demselben Referenzobjekt aus.\u000a\u200b
+	\u000aSTRG: W\u00E4hlt verschachtelte Instanzen aus.
+	\u000aUMSCHALT: W\u00E4hlt zus\u00E4tzlich das Referenzobjekt aus.";
+
+	IDS_PNAME_IM_CREATE "#$02Erstellen";
+	IDS_PHELP_IM_CREATE "Erstellt neue Instanzen oder kopiert existierende.\u000a\u200b
+	\u000aSTRG: Konvertiert die selektierten Objekte und setzt das zuletzt ausgew\u00E4hlte Objekt als Referenz.
+	\u000aUMSCHALT: Verschiebt alle Unterobjekte in das neue Referenzobjekt.
+	\u000aALT: Beh\u00E4lt Unterobjekte bei.";
+
+	IDS_PNAME_IM_RENAME "#$03Umbenennen";
+	IDS_PHELP_IM_RENAME "Benennt alle Instanzen nach dem Referenzobjekt um.\u000a\u200b
+	\u000aSTRG: Benennt zus\u00E4tzlich verschachtelte Instanzen um.
+	\u000aUMSCHALT: Nummeriert zus\u00E4tzlich die Instanzen.";
+
+	IDS_PNAME_IM_SPLIT "#$04Aufteilen";
+	IDS_PHELP_IM_SPLIT "Teilt ausgew\u00E4hlte Instanzen auf und verlinkt sie neu. Die zuletzt ausgew\u00E4hlte Instanz wird zum Referenzobjekt umgewandelt.\u000a\u200b
+	\u000aSTRG: Umbenennen-Dialog wird angezeigt, um das neue Referenzobjekt umzubenennen.
+	\u000aUMSCHALT: Unterobjekte der aktiven Instanz werden entfernt.";
+
+	IDS_PNAME_IM_MAKEEDITABLE "#$05Instanz konvertieren";
+	IDS_PHELP_IM_MAKEEDITABLE "Erweiterung zu Cinema 4Ds \u201cGrundobjekt konvertieren\u201d. Konvertiert Render- und Multiinstanzen.\u000a\u200b
+	\u000aSTRG: Konvertiert verschachtelte Instanzen direkt zum tats\u00E4chlichen Referenzobjekt.
+	\u000aUMSCHALT: Entfernt Unterobjekte der Instanz.
+	\u000aALT: \u00DCbernimmt keine Unterobjekte des Referenzobjekts.";
+
+	IDS_PNAME_IM_SWAP "#$06Tauschen";
+	IDS_PHELP_IM_SWAP "Tauscht eine Instanz mit ihrem Referenzobjekt und zur\u00FCck. Erlaubt, Referenzobjekte an der selben Stelle zu bearbeiten.\u000a\u200b
+	\u000aSTRG: Zus\u00E4tzlichen werden Unterobjekte getauscht.";
+
+	IDS_PNAME_IM_FRAMEOBJECTS "#$07Auf selektierte Objekte zoomen";
+	IDS_PHELP_IM_FRAMEOBJECTS "Ersetzt Cinema 4Ds \u201cAuf selektiertes Objekt zoomen\u201d. Funktioniert mit Render- und Multiinstanzen.";
+
+	IDS_PNAME_IM_FRAMEELEMENTS "#$08Auf selektierte Elemente zoomen";
+	IDS_PHELP_IM_FRAMEELEMENTS "Ersetzt Cinema 4Ds \u201cAuf selektierte Elemente zoomen\u201d. Funktioniert mit Render- und Multiinstanzen.";
+
+	IDS_PNAME_IM "#$10Einstellungen";
+	IDS_PHELP_IM "InstanceMan Einstellungen \u00F6ffnen";
+	
+	IDS_SETTINGSDIALOG_TITLE "InstanceMan Einstellungen";
+	IDS_LBL_INSTANCEMODE "Standard f\u00FCr neue Instanzen";
+	
+	IDS_REFCOUNTWARN "Maximale Anzahl an Verlinkungen erreicht! (Instanzen gegenseitig verkn\u00FCpft?)";
+}

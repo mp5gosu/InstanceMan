@@ -1,0 +1,46 @@
+STRINGTABLE
+{
+	IDS_PNAME_IM_SELECT "#$01Select";
+	IDS_PHELP_IM_SELECT "Select all instances of the same reference object.\u000a\u200b
+	\u000aCTRL: Selects nested instances.
+	\u000aSHIFT: Also select reference object.";
+
+	IDS_PNAME_IM_CREATE "#$02Create";
+	IDS_PHELP_IM_CREATE "Creates new instances or copies existing ones.\u000a\u200b
+	\u000aCTRL: Converts current object selection to instances and sets the last selected object as reference.
+	\u000aSHIFT: Moves all children into the new reference object.
+	\u000aALT: Keeps children.";
+
+	IDS_PNAME_IM_RENAME "#$03Rename";
+	IDS_PHELP_IM_RENAME "Renames all selected instances according to their reference object.\u000a\u200b
+	\u000aCTRL: Also renames nested instances.
+	\u000aSHIFT: Enumerates the selected instances.";
+
+	IDS_PNAME_IM_SPLIT "#$04Split";
+	IDS_PHELP_IM_SPLIT "Relinks selected instances. The last selected instance is converted to a new reference object.\u000a\u200b
+	\u000aCTRL: Pops up a dialog to rename the new reference object.";
+
+	IDS_PNAME_IM_MAKEEDITABLE "#$05Make instance editable";
+	IDS_PHELP_IM_MAKEEDITABLE "Extends Cinema 4Ds \u201cMake editable\u201d. Converts render- and multi-instances.\u000a\u200b
+	\u000aCTRL: Converts nested instances directly to the root object.
+	\u000aSHIFT: Removes children of the instance.
+	\u000aALT: Don't inherit children of the reference object.";
+
+	IDS_PNAME_IM_SWAP "#$06Swap";
+	IDS_PHELP_IM_SWAP "Swap a selected instance with its reference object and back. Allows to edit an instance in place.\u000a\u200b
+	\u000aCTRL: Additionally swap children.";
+
+	IDS_PNAME_IM_FRAMEOBJECTS "#$07Frame selected objects";
+	IDS_PHELP_IM_FRAMEOBJECTS "Replaces Cinema 4Ds \u201cFrame selected objects\u201d. Render- and multi-instances are also respected.";
+
+	IDS_PNAME_IM_FRAMEELEMENTS "#$08Frame selected elements";
+	IDS_PHELP_IM_FRAMEELEMENTS "Replaces Cinema 4Ds \u201cFrame selected elements\u201d. Render- and multi-instances are also respected.";
+
+	IDS_PNAME_IM "#$10Settings";
+	IDS_PHELP_IM "Open InstanceMan settings";
+
+	IDS_SETTINGSDIALOG_TITLE "InstanceMan Settings";
+	IDS_LBL_INSTANCEMODE "Default Instance mode";
+	
+	IDS_REFCOUNTWARN "Maximum link count reached! (Circular linked instances?)";
+}
