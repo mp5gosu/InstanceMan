@@ -1,11 +1,11 @@
 # InstanceMan
-**Note:** This repository contains the R21 version. 
-For R18-R19, go to: https://github.com/mp5gosu/InstanceMan-R18
-For R20, go to: https://github.com/mp5gosu/InstanceMan-R20
+**Note:** This repository contains the R21 version.  
+For R18-R19, go to: https://github.com/mp5gosu/InstanceMan-R18  
+For R20, go to: https://github.com/mp5gosu/InstanceMan-R20  
 
 ## Download
-R21: https://github.com/mp5gosu/InstanceMan-R21/releases/latest
-R20: https://github.com/mp5gosu/InstanceMan-R20/releases/latest
+R21: https://github.com/mp5gosu/InstanceMan-R21/releases/latest  
+R20: https://github.com/mp5gosu/InstanceMan-R20/releases/latest  
 R18-R19: https://github.com/mp5gosu/InstanceMan-R18/releases/latest
 
 ## Overview
