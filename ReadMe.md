@@ -54,7 +54,7 @@ Commands available:
 
 
 ## How to build
-Clone this repository to your Cinema 4D `sdk/plugins/instanceman_r20` folder.   
+Clone this repository to your Cinema 4D `sdk/plugins/instanceman_r21` folder.   
 Prepare your master solution's `projectdefinition.txt` to include the plugin.   
 Run the projet tool to update your plugin projects.   
 
