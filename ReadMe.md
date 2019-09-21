@@ -17,7 +17,6 @@ Commands available:
 - Creates new instances or copies existing ones.
 - **Ctrl**: Converts current object selection to instances and sets the last selected object as reference.
 - **Shift**: Moves all children into the new reference object.
-- **Alt**: Deselects all object before the operation.
 
 #### Select
 - Selects all instances of the same reference object.
