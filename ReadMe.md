@@ -28,7 +28,7 @@ Commands available:
 - **Ctrl**: Also renames nested instances.
 - **Shift**: Enumerates the selected instances.
 
-- #### Split
+#### Split
 - Relinks selected instances. The last selected instance is converted to a new reference object.
 - **Ctrl**: Pops up a dialog to rename the new reference object.
 
