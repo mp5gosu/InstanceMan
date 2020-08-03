@@ -1,6 +1,6 @@
 # InstanceMan
 **Note:** This repository contains the R20 version.  
-For R18-R19, go to: https://github.com/mp5gosu/InstanceMan-R18
+For R18-R19, go to: https://github.com/mp5gosu/InstanceMan-R18  
 For R21, go to: https://github.com/mp5gosu/InstanceMan-R21
 
 ## Download
@@ -28,7 +28,7 @@ Commands available:
 - **Ctrl**: Also renames nested instances.
 - **Shift**: Enumerates the selected instances.
 
-- #### Split
+#### Split
 - Relinks selected instances. The last selected instance is converted to a new reference object.
 - **Ctrl**: Pops up a dialog to rename the new reference object.
 
