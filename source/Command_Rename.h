@@ -35,10 +35,9 @@ public:
 			return false;
 
 		// Detect Key modifiers#
-		BaseContainer state;
-		GetInputState(BFM_INPUT_KEYBOARD, BFM_INPUT_MODIFIERS, state);
-		const auto bCtrl = (state.GetInt32(BFM_INPUT_QUALIFIER) & QCTRL) != 0;
-		const auto bShift = (state.GetInt32(BFM_INPUT_QUALIFIER) & QSHIFT) != 0;
+		const auto bCtrl = g_CheckModifierKey(QCTRL);
+		const auto bShift = g_CheckModifierKey(QSHIFT);
+
 		for (auto i = 0; i < activeObjects->GetCount(); ++i)
 		{
 			auto j = 0;

@@ -41,9 +41,7 @@ public:
 
 
 		// Detect Key modifiers#
-		BaseContainer state;
-		GetInputState(BFM_INPUT_MOUSE, BFM_INPUT_MOUSELEFT, state);
-		const auto bCtrl = (state.GetInt32(BFM_INPUT_QUALIFIER) & QCTRL) != 0;
+		const auto bCtrl = g_CheckModifierKey(QCTRL);
 		String newName;
 
 		// Remove all objects that are not instances
