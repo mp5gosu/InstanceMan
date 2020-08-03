@@ -37,10 +37,8 @@ public:
 			return false;
 
 		// Detect Key modifiers
-		BaseContainer state;
-		GetInputState(BFM_INPUT_KEYBOARD, BFM_INPUT_MODIFIERS, state);
-		const auto bShift = (state.GetInt32(BFM_INPUT_QUALIFIER) & QSHIFT) != 0;
-		const auto bCtrl = (state.GetInt32(BFM_INPUT_QUALIFIER) & QCTRL) != 0;
+		const auto bCtrl = g_CheckModifierKey(QCTRL);
+		const auto bShift = g_CheckModifierKey(QSHIFT);
 
 		// Unselect all objects
 		g_DeselectAllObjects(doc);
@@ -59,7 +57,7 @@ public:
 			if (obj->IsInstanceOf(Obase))
 			{
 				// Retrieve the referenced object in the first instance selected and select all corresponding instances
-				auto referenceObject = obj->IsInstanceOf(Oinstance) ? g_GetInstanceRef(obj, bCtrl) : obj; // Alternativley user getInstanceRefDeep
+				auto referenceObject = obj->IsInstanceOf(Oinstance) ? g_GetInstanceRef(obj, bCtrl) : obj; // Alternativley use getInstanceRefDeep
 				auto currentObject = doc->GetFirstObject();
 
 				// Speedup
