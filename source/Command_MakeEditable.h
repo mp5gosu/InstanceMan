@@ -65,7 +65,8 @@ public:
 				doc->AddUndo(UNDOTYPE::NEWOBJ, convertedInstance);
 
 				// Select the new object
-				doc->SetActiveObject(convertedInstance, SELECTION_ADD);
+				doc->AddUndo(UNDOTYPE::BITS, convertedInstance);
+				convertedInstance->SetBit(BIT_ACTIVE);
 
 				// Update links - ONLY for shallow conversion. Deep conversion doesn't require TransferGoal()
 				obj->TransferGoal(convertedInstance, false);
