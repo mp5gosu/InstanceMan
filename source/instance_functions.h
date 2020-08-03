@@ -79,10 +79,8 @@ inline BaseObject* g_CreateInstance(BaseObject* refObj)
 
 
 	// Deselect reference object and select new instance object
-	doc->AddUndo(UNDOTYPE::BITS, refObj);
-	refObj->DelBit(BIT_ACTIVE);
-	doc->AddUndo(UNDOTYPE::BITS, instanceObject);
-	instanceObject->SetBit(BIT_ACTIVE);
+	doc->SetActiveObject(refObj, SELECTION_SUB);
+	doc->SetActiveObject(instanceObject, SELECTION_ADD);
 
 	return instanceObject;
 }

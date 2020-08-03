@@ -61,6 +61,7 @@ public:
 				auto currentObject = doc->GetFirstObject();
 
 				// Speedup
+				// If the link is empty, just carry on to the next.
 				if (!referenceObject) 
 					break;
 
@@ -79,12 +80,10 @@ public:
 							// Select reference object if Shift is held down
 							if (bShift)
 							{
-								doc->AddUndo(UNDOTYPE::BITS, referenceObject);
-								referenceObject->SetBit(BIT_ACTIVE);
+								doc->SetActiveObject(referenceObject, SELECTION_ADD);
 							}
 
-							doc->AddUndo(UNDOTYPE::BITS, currentObject);
-							currentObject->SetBit(BIT_ACTIVE);
+							doc->SetActiveObject(currentObject, SELECTION_ADD);
 						}
 					}
 					currentObject = static_cast<BaseObject*>(g_GetNextElement(static_cast<GeListNode*>(currentObject)));
