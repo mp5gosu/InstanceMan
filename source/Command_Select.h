@@ -51,7 +51,7 @@ public:
 			const auto obj = static_cast<BaseObject*>(activeObjects->GetIndex(i));
 
 			// No object was selected
-			if (!doc)
+			if (!obj)
 				continue;
 
 
