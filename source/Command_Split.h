@@ -46,6 +46,7 @@ public:
 
 		// Remove all objects that are not instances
 		activeObjects->FilterObject(Oinstance, Oinstance, true);
+
 		// Convert the lastly selected instance to the new reference object
 		auto lastObject = static_cast<BaseObject*>(activeObjects->GetIndex(activeObjects->GetCount() - 1));
 		activeObjects->Remove(lastObject);
@@ -65,6 +66,7 @@ public:
 				return false;
 		}
 
+		auto mg = lastObject->GetMg();
 		const auto refObj = g_MakeInstanceEditable(lastObject);
 
 		if (!refObj)
@@ -75,6 +77,7 @@ public:
 
 		// Insert converted object (the new reference) into the document
 		doc->InsertObject(refObj, lastObject->GetUp(), lastObject->GetPred());
+		refObj->SetMg(mg);
 		doc->AddUndo(UNDOTYPE::NEWOBJ, refObj);
 
 		// Relink instances
