@@ -79,12 +79,10 @@ public:
 							// Select reference object if Shift is held down
 							if (bShift)
 							{
-								doc->AddUndo(UNDOTYPE::BITS, referenceObject);
-								referenceObject->SetBit(BIT_ACTIVE);
+								doc->SetActiveObject(referenceObject, SELECTION_ADD);
 							}
 
-							doc->AddUndo(UNDOTYPE::BITS, currentObject);
-							currentObject->SetBit(BIT_ACTIVE);
+							doc->SetActiveObject(currentObject, SELECTION_ADD);
 						}
 					}
 					currentObject = static_cast<BaseObject*>(g_GetNextElement(static_cast<GeListNode*>(currentObject)));
