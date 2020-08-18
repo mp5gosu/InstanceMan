@@ -6,7 +6,8 @@ STRINGTABLE
 	\u000aUMSCHALT: W\u00E4hlt zus\u00E4tzlich das Referenzobjekt aus.";
 
 	IDS_PNAME_IM_SELECTBROKEN "#$01Ung\u00fcltige ausw\u00E4hlen";
-	IDS_PHELP_IM_SELECTBROKEN "W\u00E4hlt alle Instanzen ohne g\u00fcltigen Link aus.";
+	IDS_PHELP_IM_SELECTBROKEN "W\u00E4hlt alle Instanzen ohne g\u00fcltigen Link aus.\u000a\u200b
+	\u000aUMSCHALT: Zu bestehender Selektion hinzuf\u00fcgen.";
 
 	IDS_PNAME_IM_CREATE "#$02Erstellen";
 	IDS_PHELP_IM_CREATE "Erstellt neue Instanzen oder kopiert existierende.\u000a\u200b

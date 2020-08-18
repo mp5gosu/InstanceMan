@@ -22,7 +22,7 @@ Bool PluginStart()
 		return false;
 	
 	// SelectBroken
-	if (!RegisterCommandPlugin(PID_IM_SELECTBROKEN, g_resource.LoadString(IDS_PNAME_IM_SELECT), 0, AutoBitmap(String(PICON_IM_SELECTBROKEN)), g_resource.LoadString(IDS_PHELP_IM_SELECTBROKEN), NewObj(Command_SelectBroken) iferr_ignore("Cannot instantiate: Command_SelectBroken")))
+	if (!RegisterCommandPlugin(PID_IM_SELECTBROKEN, g_resource.LoadString(IDS_PNAME_IM_SELECTBROKEN), 0, AutoBitmap(String(PICON_IM_SELECTBROKEN)), g_resource.LoadString(IDS_PHELP_IM_SELECTBROKEN), NewObj(Command_SelectBroken) iferr_ignore("Cannot instantiate: Command_SelectBroken")))
 		return false;
 
 	// Create
