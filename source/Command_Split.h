@@ -42,6 +42,8 @@ public:
 
 		// Detect Key modifiers#
 		const auto bCtrl = g_CheckModifierKey(QCTRL);
+		const auto bAlt = g_CheckModifierKey(QALT);
+		const auto bShift = g_CheckModifierKey(QSHIFT);
 		String newName;
 
 		// Remove all objects that are not instances
@@ -66,7 +68,7 @@ public:
 				return false;
 		}
 
-		auto mg = lastObject->GetMg();
+
 		const auto refObj = g_MakeInstanceEditable(lastObject);
 
 		if (!refObj)
@@ -76,8 +78,8 @@ public:
 		refObj->SetName(newName.IsEmpty() ? refObj->GetName() : newName);
 
 		// Insert converted object (the new reference) into the document
+		refObj->SetMg(lastObject->GetMg());
 		doc->InsertObject(refObj, lastObject->GetUp(), lastObject->GetPred());
-		refObj->SetMg(mg);
 		doc->AddUndo(UNDOTYPE::NEWOBJ, refObj);
 
 		// Relink instances
