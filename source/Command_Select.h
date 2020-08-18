@@ -25,9 +25,7 @@ public:
 		if (!doc)
 			return false;
 
-		doc->StartUndo();
-
-		// Create Array that holds all objects to operate on
+			// Create a cache of objects to operate on
 		const AutoAlloc<AtomArray> activeObjects;
 		doc->GetActiveObjectsFilter(*activeObjects, false, NOTOK, Obase);
 
@@ -40,10 +38,10 @@ public:
 		const auto bCtrl = g_CheckModifierKey(QCTRL);
 		const auto bShift = g_CheckModifierKey(QSHIFT);
 
-		// Unselect all objects
+		// Unselect all objects (does not affect cached selections)
 		g_DeselectAllObjects(doc);
 
-		// Iterate through all selected objects
+		// Iterate through all previously selected objects (cached selections)
 		for (auto i = 0; i < activeObjects->GetCount(); ++i)
 		{
 			const auto obj = static_cast<BaseObject*>(activeObjects->GetIndex(i));
@@ -92,7 +90,6 @@ public:
 
 		EventAdd();
 
-		doc->EndUndo();
 		return true;
 	}
 };
