@@ -13,7 +13,7 @@ public:
 	{
 		// Disable Menu entry if not at least 2 objects are selected selected
 		AutoAlloc<AtomArray> arr;
-		doc->GetActiveObjects(*arr, GETACTIVEOBJECTFLAGS::CHILDREN);
+		doc->GetActiveObjects(arr, GETACTIVEOBJECTFLAGS::CHILDREN);
 		if (!arr || arr->GetCount() < 2)
 			return 0;
 		return CMD_ENABLED;
@@ -24,12 +24,11 @@ public:
 		if (!doc)
 			return false;
 
-
 		doc->StartUndo();
 
 		// Create Array that holds all objects to operate on
 		AutoAlloc<AtomArray> activeObjects;
-		doc->GetActiveObjects(*activeObjects, GETACTIVEOBJECTFLAGS::SELECTIONORDER | GETACTIVEOBJECTFLAGS::CHILDREN);
+		doc->GetActiveObjects(activeObjects, GETACTIVEOBJECTFLAGS::SELECTIONORDER | GETACTIVEOBJECTFLAGS::CHILDREN);
 
 		// Allocation failed
 		if (!activeObjects)
@@ -39,15 +38,14 @@ public:
 		if (activeObjects->GetCount() <= 1)
 			return false;
 
-
-		// Detect Key modifiers#
-		BaseContainer state;
-		GetInputState(BFM_INPUT_MOUSE, BFM_INPUT_MOUSELEFT, state);
-		const auto bCtrl = (state.GetInt32(BFM_INPUT_QUALIFIER) & QCTRL) != 0;
+		// Detect Key modifiers
+		const auto bCtrl = g_CheckModifierKey(QCTRL);
+		
 		String newName;
 
 		// Remove all objects that are not instances
 		activeObjects->FilterObject(Oinstance, Oinstance, true);
+		
 		// Convert the lastly selected instance to the new reference object
 		auto lastObject = static_cast<BaseObject*>(activeObjects->GetIndex(activeObjects->GetCount() - 1));
 		activeObjects->Remove(lastObject);
@@ -76,6 +74,7 @@ public:
 		refObj->SetName(newName.IsEmpty() ? refObj->GetName() : newName);
 
 		// Insert converted object (the new reference) into the document
+		refObj->SetMg(lastObject->GetMg());
 		doc->InsertObject(refObj, lastObject->GetUp(), lastObject->GetPred());
 		doc->AddUndo(UNDOTYPE::NEWOBJ, refObj);
 

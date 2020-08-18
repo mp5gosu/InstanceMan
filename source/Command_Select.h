@@ -13,7 +13,7 @@ public:
 	{
 		// Disable Menu entry if no object is selected
 		AutoAlloc<AtomArray> arr;
-		doc->GetActiveObjects(*arr, GETACTIVEOBJECTFLAGS::NONE);
+		doc->GetActiveObjects(arr, GETACTIVEOBJECTFLAGS::NONE);
 		if (!arr || arr->GetCount() == 0)
 			return 0;
 		return CMD_ENABLED;
@@ -25,33 +25,28 @@ public:
 		if (!doc)
 			return false;
 
-		doc->StartUndo();
-
-		// Create Array that holds all objects to operate on
+		// Create a cache of objects to operate on
 		AutoAlloc<AtomArray> activeObjects;
-		doc->GetActiveObjectsFilter(*activeObjects, false, NOTOK, Obase);
-
+		doc->GetActiveObjectsFilter(activeObjects, false, NOTOK, Obase);
 
 		// Allocation failed
 		if (!activeObjects)
 			return false;
 
 		// Detect Key modifiers
-		BaseContainer state;
-		GetInputState(BFM_INPUT_KEYBOARD, BFM_INPUT_MODIFIERS, state);
-		const auto bShift = (state.GetInt32(BFM_INPUT_QUALIFIER) & QSHIFT) != 0;
-		const auto bCtrl = (state.GetInt32(BFM_INPUT_QUALIFIER) & QCTRL) != 0;
+		const auto bCtrl = g_CheckModifierKey(QCTRL);
+		const auto bShift = g_CheckModifierKey(QSHIFT);
 
-		// Unselect all objects
+		// Unselect all objects (does not affect cached selections)
 		g_DeselectAllObjects(doc);
 
-		// Iterate through all selected objects
+		// Iterate through all previously selected objects (cached selections)
 		for (auto i = 0; i < activeObjects->GetCount(); ++i)
 		{
 			const auto obj = static_cast<BaseObject*>(activeObjects->GetIndex(i));
 
 			// No object was selected
-			if (!doc)
+			if (!obj)
 				continue;
 
 
@@ -59,11 +54,11 @@ public:
 			if (obj->IsInstanceOf(Obase))
 			{
 				// Retrieve the referenced object in the first instance selected and select all corresponding instances
-				auto referenceObject = obj->IsInstanceOf(Oinstance) ? g_GetInstanceRef(obj, bCtrl) : obj; // Alternativley user getInstanceRefDeep
+				auto referenceObject = obj->IsInstanceOf(Oinstance) ? g_GetInstanceRef(obj, bCtrl) : obj; // Alternativley use getInstanceRefDeep
 				auto currentObject = doc->GetFirstObject();
 
 				// Speedup
-				if (!referenceObject) 
+				if (!referenceObject)
 					break;
 
 
@@ -81,12 +76,10 @@ public:
 							// Select reference object if Shift is held down
 							if (bShift)
 							{
-								doc->AddUndo(UNDOTYPE::BITS, referenceObject);
-								referenceObject->SetBit(BIT_ACTIVE);
+								doc->SetActiveObject(referenceObject, SELECTION_ADD);
 							}
 
-							doc->AddUndo(UNDOTYPE::BITS, currentObject);
-							currentObject->SetBit(BIT_ACTIVE);
+							doc->SetActiveObject(currentObject, SELECTION_ADD);
 						}
 					}
 					currentObject = static_cast<BaseObject*>(g_GetNextElement(static_cast<GeListNode*>(currentObject)));
@@ -96,7 +89,6 @@ public:
 
 		EventAdd();
 
-		doc->EndUndo();
 		return true;
 	}
 };

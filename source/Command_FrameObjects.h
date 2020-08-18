@@ -11,7 +11,7 @@ public:
 	{
 		// Disable Menu entry if no object is selected
 		AutoAlloc<AtomArray> arr;
-		doc->GetActiveObjects(*arr, GETACTIVEOBJECTFLAGS::NONE);
+		doc->GetActiveObjects(arr, GETACTIVEOBJECTFLAGS::NONE);
 		if (!arr || arr->GetCount() == 0)
 			return 0;
 		return CMD_ENABLED;

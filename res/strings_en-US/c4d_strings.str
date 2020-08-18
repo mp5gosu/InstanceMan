@@ -5,6 +5,10 @@ STRINGTABLE
 	\u000aCTRL: Selects nested instances.
 	\u000aSHIFT: Also select reference object.";
 
+	IDS_PNAME_IM_SELECTBROKEN "#$01Select broken";
+	IDS_PHELP_IM_SELECTBROKEN "Select all unconnected instances.\u000a\u200b
+	\u000aSHIFT: Adds to current object selection.";
+
 	IDS_PNAME_IM_CREATE "#$02Create";
 	IDS_PHELP_IM_CREATE "Creates new instances or copies existing ones.\u000a\u200b
 	\u000aCTRL: Converts current object selection to instances and sets the last selected object as reference.

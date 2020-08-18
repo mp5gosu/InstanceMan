@@ -86,7 +86,7 @@ public:
 		{
 			AutoAlloc<AtomArray> refObjChildren;
 
-			g_GetChildren(swapTarget, *refObjChildren);
+			g_GetChildren(swapTarget, refObjChildren);
 			g_MoveChildren(obj, swapTargetClone);
 
 			// Now move the refObject's children to the instance

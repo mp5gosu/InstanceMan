@@ -4,6 +4,7 @@
 
 #include "constants.h"
 #include "Command_Select.h"
+#include "Command_SelectBroken.h"
 #include "Command_Create.h"
 #include "Command_Split.h"
 #include "Command_Rename.h"
@@ -18,6 +19,10 @@ Bool PluginStart()
 {
 	// Select
 	if (!RegisterCommandPlugin(PID_IM_SELECT, g_resource.LoadString(IDS_PNAME_IM_SELECT), 0, AutoBitmap(String(PICON_IM_SELECT)), g_resource.LoadString(IDS_PHELP_IM_SELECT), NewObj(Command_Select) iferr_ignore("Cannot instantiate: Command_Select")))
+		return false;
+
+	// SelectBroken
+	if (!RegisterCommandPlugin(PID_IM_SELECTBROKEN, g_resource.LoadString(IDS_PNAME_IM_SELECTBROKEN), 0, AutoBitmap(String(PICON_IM_SELECTBROKEN)), g_resource.LoadString(IDS_PHELP_IM_SELECTBROKEN), NewObj(Command_SelectBroken) iferr_ignore("Cannot instantiate: Command_SelectBroken")))
 		return false;
 
 	// Create
@@ -73,6 +78,4 @@ Bool PluginMessage(Int32 id, void* data)
 	return true;
 }
 
-void PluginEnd()
-{
-}
+void PluginEnd() {}

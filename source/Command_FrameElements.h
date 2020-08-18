@@ -26,7 +26,7 @@ public:
 
 		// Create Array that holds all objects to operate on
 		AutoAlloc<AtomArray> activeObjects;
-		doc->GetActiveObjects(*activeObjects, GETACTIVEOBJECTFLAGS::SELECTIONORDER | GETACTIVEOBJECTFLAGS::CHILDREN);
+		doc->GetActiveObjects(activeObjects, GETACTIVEOBJECTFLAGS::SELECTIONORDER | GETACTIVEOBJECTFLAGS::CHILDREN);
 
 		// Allocation failed
 		if (!activeObjects)
@@ -36,10 +36,10 @@ public:
 		GeData data;
 		for (auto i = 0; i < activeObjects->GetCount(); ++i)
 		{
-			const auto obj = static_cast<BaseObject*>(activeObjects->GetIndex(i));
+			auto obj = static_cast<BaseObject*>(activeObjects->GetIndex(i));
 			if (obj->GetType() == Oinstance)
 			{
-				auto bc = obj->GetDataInstance();
+				auto* bc = obj->GetDataInstance();
 				if (!bc)
 					continue;
 

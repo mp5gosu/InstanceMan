@@ -10,6 +10,9 @@
 static const Int32 PID_IM_SELECT = 1050045;
 static const char* PICON_IM_SELECT = "im_select.tif";
 
+// IM_SelectBroken
+static const Int32 PID_IM_SELECTBROKEN = 1055638;
+static const char* PICON_IM_SELECTBROKEN = "im_selectbroken.tif";
 
 // IM_CreateInstances
 static const Int32 PID_IM_CREATE = 1050047;
