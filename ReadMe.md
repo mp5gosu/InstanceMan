@@ -1,12 +1,9 @@
 # InstanceMan
-**Note:** This repository contains the R20 version.  
+**Note:** This repository contains the R20+ version.  
 For R18-R19, go to: https://github.com/mp5gosu/InstanceMan-R18  
-For R21, go to: https://github.com/mp5gosu/InstanceMan-R21
 
 ## Download
-R21: https://github.com/mp5gosu/InstanceMan-R21/releases/latest  
-R20: https://github.com/mp5gosu/InstanceMan-R20/releases/latest  
-R18-R19: https://github.com/mp5gosu/InstanceMan-R18/releases/latest
+R20+: https://github.com/mp5gosu/InstanceMan/releases/latest 
 
 ## Overview
 InstanceMan is a Cinema 4D plugin that helps managing instance objects.
@@ -22,6 +19,10 @@ Commands available:
 - Selects all instances of the same reference object.
 - **Ctrl**: Selects nested instances.
 - **Shift**: Also select reference object.
+
+#### Select broken
+- Select all unconnected instances.
+- **Shift**: Adds to current object selection.
 
 #### Rename
 - Renames all selected instances according to their reference object.
