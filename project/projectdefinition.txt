@@ -1,7 +1,7 @@
 // Supported platforms - can be [Win64;OSX]
 Platform=Win64;OSX
 
-Name=instanceman_r20
+Name=instanceman_r23
 
 // Type of project - can be [Lib;DLL;App]
 Type=DLL
@@ -15,4 +15,4 @@ C4D=true
 stylecheck.level=0 // must be set after c4d=true
 
 // Custom ID
-ModuleId=de.roberthitzer.instancemanr20
+ModuleId=de.roberthitzer.instancemanr23
