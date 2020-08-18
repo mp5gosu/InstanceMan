@@ -9,7 +9,7 @@ class Command_Swap : public CommandData
 INSTANCEOF(Command_FrameObjects,CommandData)
 
 public:
-	Int32 GetState(BaseDocument* doc) override
+	Int32 GetState(BaseDocument* doc, GeDialog* parentManager) override
 	{
 		// Disable Menu entry if no valid object is selected
 		const auto obj = doc->GetActiveObject();
@@ -34,7 +34,7 @@ public:
 		return 0;
 	}
 
-	Bool Execute(BaseDocument* doc) override
+	Bool Execute(BaseDocument* doc, GeDialog* parentManager) override
 	{
 		if (!doc)
 			return false;

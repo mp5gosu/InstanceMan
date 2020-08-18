@@ -9,7 +9,7 @@ class Command_Rename : public CommandData
 INSTANCEOF(Command_Select, CommandData)
 
 public:
-	Int32 GetState(BaseDocument* doc) override
+	Int32 GetState(BaseDocument* doc, GeDialog* parentManager) override
 	{
 		// Disable Menu entry if no object is selected
 		AutoAlloc<AtomArray> arr;
@@ -19,7 +19,7 @@ public:
 		return CMD_ENABLED;
 	}
 
-	Bool Execute(BaseDocument* doc) override
+	Bool Execute(BaseDocument* doc, GeDialog* parentManager) override
 	{
 		if (!doc)
 			return false;
@@ -37,7 +37,7 @@ public:
 		// Detect Key modifiers#
 		const auto bCtrl = g_CheckModifierKey(QCTRL);
 		const auto bShift = g_CheckModifierKey(QSHIFT);
-
+		
 		for (auto i = 0; i < activeObjects->GetCount(); ++i)
 		{
 			auto j = 0;

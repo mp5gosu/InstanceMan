@@ -10,7 +10,7 @@ class Command_Settings : public CommandData
 INSTANCEOF(Command_Settings, CommandData)
 
 public:
-	Bool Execute(BaseDocument* doc) override
+	Bool Execute(BaseDocument* doc, GeDialog* parentManager) override
 	{
 		return _dlg.Open(DLG_TYPE::ASYNC, PID_IM, -1, -1, 400, 0);
 	}

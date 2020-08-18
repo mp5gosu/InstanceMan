@@ -9,7 +9,7 @@ class Command_SelectBroken : public CommandData
 INSTANCEOF(Command_SelectBroken, CommandData)
 
 public:
-	Bool Execute(BaseDocument* doc) override
+	Bool Execute(BaseDocument* doc, GeDialog* parentManager) override
 	{
 		StopAllThreads();
 		if (!doc)

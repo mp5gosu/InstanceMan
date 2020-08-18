@@ -9,7 +9,7 @@ class Command_Split : public CommandData
 INSTANCEOF(Command_Split, CommandData)
 
 public:
-	Int32 GetState(BaseDocument* doc) override
+	Int32 GetState(BaseDocument* doc, GeDialog* parentManager) override
 	{
 		// Disable Menu entry if not at least 2 objects are selected selected
 		AutoAlloc<AtomArray> arr;
@@ -19,7 +19,7 @@ public:
 		return CMD_ENABLED;
 	}
 
-	Bool Execute(BaseDocument* doc) override
+	Bool Execute(BaseDocument* doc, GeDialog* parentManager) override
 	{
 		if (!doc)
 			return false;
@@ -45,7 +45,7 @@ public:
 
 		// Remove all objects that are not instances
 		activeObjects->FilterObject(Oinstance, Oinstance, true);
-
+		
 		// Convert the lastly selected instance to the new reference object
 		auto lastObject = static_cast<BaseObject*>(activeObjects->GetIndex(activeObjects->GetCount() - 1));
 		activeObjects->Remove(lastObject);
