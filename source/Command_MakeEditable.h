@@ -12,7 +12,7 @@ public:
 	Int32 GetState(BaseDocument* doc) override
 	{
 		// Disable Menu entry if no object is selected
-		const AutoAlloc<AtomArray> arr;
+		AutoAlloc<AtomArray> arr;
 		doc->GetActiveObjects(arr, GETACTIVEOBJECTFLAGS::CHILDREN);
 		if (!arr || arr->GetCount() == 0)
 			return 0;
@@ -39,7 +39,7 @@ public:
 		doc->StartUndo();
 
 		// Create Array that holds all objects to operate on
-		const AutoAlloc<AtomArray> activeObjects;
+		AutoAlloc<AtomArray> activeObjects;
 		doc->GetActiveObjects(*activeObjects, GETACTIVEOBJECTFLAGS::CHILDREN);
 
 		// empty? quit.
@@ -66,7 +66,6 @@ public:
 
 				// Select the new object
 				doc->SetActiveObject(convertedInstance, SELECTION_ADD);
-				
 
 				// Update links - ONLY for shallow conversion. Deep conversion doesn't require TransferGoal()
 				obj->TransferGoal(convertedInstance, false);

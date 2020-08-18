@@ -12,7 +12,7 @@ public:
 	Int32 GetState(BaseDocument* doc) override
 	{
 		// Disable Menu entry if no object is selected
-		const AutoAlloc<AtomArray> arr;
+		AutoAlloc<AtomArray> arr;
 		doc->GetActiveObjects(arr, GETACTIVEOBJECTFLAGS::NONE);
 		if (!arr || arr->GetCount() == 0)
 			return 0;
@@ -25,10 +25,9 @@ public:
 		if (!doc)
 			return false;
 
-			// Create a cache of objects to operate on
-		const AutoAlloc<AtomArray> activeObjects;
-		doc->GetActiveObjectsFilter(*activeObjects, false, NOTOK, Obase);
-
+		// Create a cache of objects to operate on
+		AutoAlloc<AtomArray> activeObjects;
+		doc->GetActiveObjectsFilter(activeObjects, false, NOTOK, Obase);
 
 		// Allocation failed
 		if (!activeObjects)
@@ -59,7 +58,7 @@ public:
 				auto currentObject = doc->GetFirstObject();
 
 				// Speedup
-				if (!referenceObject) 
+				if (!referenceObject)
 					break;
 
 

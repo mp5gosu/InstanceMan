@@ -10,8 +10,8 @@ public:
 	Int32 GetState(BaseDocument* doc) override
 	{
 		// Disable Menu entry if no object is selected
-		const AutoAlloc<AtomArray> arr;
-		doc->GetActiveObjects(arr, GETACTIVEOBJECTFLAGS::NONE);
+		AutoAlloc<AtomArray> arr;
+		doc->GetActiveObjects(*arr, GETACTIVEOBJECTFLAGS::NONE);
 		if (!arr || arr->GetCount() == 0)
 			return 0;
 		return CMD_ENABLED;
@@ -26,7 +26,7 @@ public:
 
 
 		// Create Array that holds all objects to operate on; respects order of selection
-		const AutoAlloc<AtomArray> activeObjects;
+		AutoAlloc<AtomArray> activeObjects;
 		doc->GetActiveObjects(*activeObjects, GETACTIVEOBJECTFLAGS::SELECTIONORDER | GETACTIVEOBJECTFLAGS::CHILDREN);
 
 

@@ -84,7 +84,7 @@ public:
 		// Move the instance's children directly to the clone of refObj, since it has no hierarchy anymore
 		if (bCtrl)
 		{
-			const AutoAlloc<AtomArray> refObjChildren;
+			AutoAlloc<AtomArray> refObjChildren;
 
 			g_GetChildren(swapTarget, refObjChildren);
 			g_MoveChildren(obj, swapTargetClone);

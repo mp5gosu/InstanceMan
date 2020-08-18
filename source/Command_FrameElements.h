@@ -10,8 +10,8 @@ public:
 	Int32 GetState(BaseDocument* doc) override
 	{
 		// Disable Menu entry if no object is selected
-		const AutoAlloc<AtomArray> arr;
-		doc->GetActiveObjects(arr, GETACTIVEOBJECTFLAGS::NONE);
+		AutoAlloc<AtomArray> arr;
+		doc->GetActiveObjects(*arr, GETACTIVEOBJECTFLAGS::NONE);
 		if (!arr || arr->GetCount() == 0)
 			return 0;
 		return CMD_ENABLED;
@@ -25,7 +25,7 @@ public:
 		doc->StartUndo();
 
 		// Create Array that holds all objects to operate on
-		const AutoAlloc<AtomArray> activeObjects;
+		AutoAlloc<AtomArray> activeObjects;
 		doc->GetActiveObjects(activeObjects, GETACTIVEOBJECTFLAGS::SELECTIONORDER | GETACTIVEOBJECTFLAGS::CHILDREN);
 
 		// Allocation failed
@@ -36,10 +36,10 @@ public:
 		GeData data;
 		for (auto i = 0; i < activeObjects->GetCount(); ++i)
 		{
-			const auto obj = static_cast<BaseObject*>(activeObjects->GetIndex(i));
+			auto obj = static_cast<BaseObject*>(activeObjects->GetIndex(i));
 			if (obj->GetType() == Oinstance)
 			{
-				auto bc = obj->GetDataInstance();
+				auto* bc = obj->GetDataInstance();
 				if (!bc)
 					continue;
 

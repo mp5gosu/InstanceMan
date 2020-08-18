@@ -12,7 +12,7 @@ public:
 	Int32 GetState(BaseDocument* doc) override
 	{
 		// Disable Menu entry if no object is selected
-		const AutoAlloc<AtomArray> arr;
+		AutoAlloc<AtomArray> arr;
 		doc->GetActiveObjects(arr, GETACTIVEOBJECTFLAGS::NONE);
 		if (!arr || arr->GetCount() == 0)
 			return 0;
@@ -27,7 +27,7 @@ public:
 		doc->StartUndo();
 
 		// Create Array that holds all objects to operate on
-		const AutoAlloc<AtomArray> activeObjects;
+		AutoAlloc<AtomArray> activeObjects;
 		doc->GetActiveObjects(activeObjects, GETACTIVEOBJECTFLAGS::NONE | GETACTIVEOBJECTFLAGS::CHILDREN);
 
 		// Allocation failed

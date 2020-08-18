@@ -12,7 +12,7 @@ public:
 	Int32 GetState(BaseDocument* doc) override
 	{
 		// Disable Menu entry if not at least 2 objects are selected selected
-		const AutoAlloc<AtomArray> arr;
+		AutoAlloc<AtomArray> arr;
 		doc->GetActiveObjects(arr, GETACTIVEOBJECTFLAGS::CHILDREN);
 		if (!arr || arr->GetCount() < 2)
 			return 0;
@@ -24,11 +24,10 @@ public:
 		if (!doc)
 			return false;
 
-
 		doc->StartUndo();
 
 		// Create Array that holds all objects to operate on
-		const AutoAlloc<AtomArray> activeObjects;
+		AutoAlloc<AtomArray> activeObjects;
 		doc->GetActiveObjects(activeObjects, GETACTIVEOBJECTFLAGS::SELECTIONORDER | GETACTIVEOBJECTFLAGS::CHILDREN);
 
 		// Allocation failed
@@ -39,9 +38,9 @@ public:
 		if (activeObjects->GetCount() <= 1)
 			return false;
 
-
-		// Detect Key modifiers#
+		// Detect Key modifiers
 		const auto bCtrl = g_CheckModifierKey(QCTRL);
+		
 		String newName;
 
 		// Remove all objects that are not instances
@@ -65,7 +64,6 @@ public:
 			if (!RenameDialog(&newName))
 				return false;
 		}
-
 
 		const auto refObj = g_MakeInstanceEditable(lastObject);
 
