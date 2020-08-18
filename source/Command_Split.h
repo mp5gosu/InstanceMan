@@ -42,8 +42,6 @@ public:
 
 		// Detect Key modifiers#
 		const auto bCtrl = g_CheckModifierKey(QCTRL);
-		const auto bAlt = g_CheckModifierKey(QALT);
-		const auto bShift = g_CheckModifierKey(QSHIFT);
 		String newName;
 
 		// Remove all objects that are not instances
